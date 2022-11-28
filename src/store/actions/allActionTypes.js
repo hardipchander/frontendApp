@@ -7,6 +7,8 @@ export const CREATE_TASK="CREATE_TASK";
 // Read
 export const GET_ALL_EMPLOYEES="GET_ALL_EMPLOYEES";
 export const GET_ALL_TASKS="GET_ALL_TASKS";
+export const GET_EMPLOYEE="GET_EMPLOYEE";
+export const GET_TASK="GET_TASK";
 
 // Update
 export const EDIT_EMPLOYEE="EDIT_EMPLOYEE";
