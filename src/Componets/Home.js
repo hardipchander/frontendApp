@@ -1,6 +1,10 @@
 import React from "react";
 import '../Styles/Home.css';
 
+// Need to connect componet to Redux State through connect function 
+import { connect } from 'react-redux'
+
+
 class Home extends React.Component {
     constructor(props) {
         super(props);
