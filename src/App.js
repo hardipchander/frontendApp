@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/tasks" element={<AllTasks/>}/>
-        <Route path="/:taskId" element={<SingleTask/>}/>
+        <Route path="/tasks/:taskId" element={<SingleTask/>}/>
       </Routes>   
     </div>
   );
