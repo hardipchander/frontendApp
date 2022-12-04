@@ -5,10 +5,10 @@ import { applyMiddleware, createStore, combineReducers } from 'redux';
 
 
 // Have my reducers here , and I need to combine them here with the combineReducers function 
+import * as allreducers from './allReducers';
 
+const rootReducers = combineReducers(allreducers);
+const logger = createLogger({ collapsed: true });
+const store = createStore(rootReducers, applyMiddleware(thunk, logger));
 
-
-
-
-
-
+export default store;
