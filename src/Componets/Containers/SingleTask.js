@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import '../Styles/SingleTask.css';
+import '../../Styles/SingleTask.css';
 
 class SingleTask extends React.Component {
     constructor(props) {

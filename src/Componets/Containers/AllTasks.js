@@ -1,11 +1,11 @@
 import React from "react";
-import '../Styles/Home.css';
+import '../../Styles/AllTasks.css';
 import {Link} from "react-router-dom";
 
 // Need to connect componet to Redux State through connect function 
 import { connect } from 'react-redux'
 
-class Home extends React.Component {
+class AllTasks extends React.Component {
     constructor(props) {
         super(props);
         this.state={};
@@ -13,12 +13,13 @@ class Home extends React.Component {
 
     render() {
         return(
-            <div className="HomePage">
-                <h1>Welcome to the Home Page</h1>
-                <Link to='/tasks'>All Tasks</Link>
+            <div className="AllTasksView">
+                <h1>All the Tasks</h1>
+                <Link to='/'>Back To HomePage</Link>
+                <Link to='/:taskId'>Single Task View</Link>
             </div>
         );
     }
 }
 
-export default Home;
+export default AllTasks;
