@@ -1,6 +1,6 @@
 // Need all the action creators because they will be called inside the thunks and axios for API
 import * as actionCreators from "./actions/allActionCreators.js";
-const axios=require('axios');
+import axios from 'axios';
 
 // I don't have my API set up yet need to wait on that 
 let linkToAPI="http://localhost:5000/api";
