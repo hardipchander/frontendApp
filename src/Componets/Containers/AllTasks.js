@@ -21,7 +21,10 @@ class AllTasks extends React.Component {
         return(
             <div className="AllTasksView">
                 <h1>All the Tasks</h1>
-                <Link to='/'>Back To HomePage</Link>
+                <div className="topPart">
+                    <Link to='/' className="link-back">Back To HomePage</Link>
+                    <h2 className="list-Name">Tasks List</h2>
+                </div>
                 <br/>
                 <AllTasksView tasks={this.props.allTasks} deleteTask={this.props.deleteTask}/>
             </div>

@@ -1,6 +1,69 @@
 .AllTasksView {
-    background-color: dodgerblue;
+    background-color: black;
     color: white;
     height: 100vh;
     width: 100vw;
+}
+
+.topPart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 3vw;
+}
+
+.list-Name {
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 3vw;
+    margin-top: 3vh;
+
+}
+
+.link-back {
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.6);
+    border-radius: 12px;
+}
+
+.link-back:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.9);
+    border-radius: 12px;
+}
+
+.All-Tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.oneTask{
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(10,36,99,0.6);
+    border-radius: 12px;
+    font-size: 2vw;
+}
+
+.oneTask:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(10,36,99,0.9);
+    border-radius: 12px;
+    font-size: 2vw;
 }
