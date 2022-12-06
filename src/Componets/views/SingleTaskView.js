@@ -7,13 +7,11 @@ const SingleTaskView=(props) => {
 
     // Infor about the Task itself
     return (
-        <div>
-          <h1>{task.description}</h1>
-          <h2>{task.prioritylevel}</h2>
-          <h3>{(task.completionstatus) ? (<h3>Finished</h3>) : (<h3>Not Done</h3>) }</h3>
-          {(task.employee)? (<h3>{task.employee.firstname + "" + task.employee.lastname}</h3>): (<p>No employee has this task assigned.</p>)}
-          <br/>
-          <Link to={`/tasks`}>Back to all Tasks</Link>
+        <div className="single-Task-Box">
+          <p className="Description">Description: {task.description}</p>
+          <p className="Prioritylevel">Prioritylevel: {task.prioritylevel}</p>
+          <p className="completionstatus">{(task.completionstatus) ? (<p>Finished</p>) : (<p>Not Done</p>) }</p>
+          {(task.employee)? (<p className="employee-text"> The employee is {task.employee.firstname + " " + task.employee.lastname}</p>): (<p className="employee-text">No employee has this task assigned.</p>)}
         </div>
       ); 
 };

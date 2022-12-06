@@ -17,8 +17,10 @@ class SingleTask extends React.Component {
     render() {
         return(
             <div className="SingleTask">
-                <h1>Single Task</h1>
-                <Link to='/tasks'>All Tasks</Link>
+                <div className="Top-Page">
+                    <h1>Single Task</h1>
+                    <Link to='/tasks' className="Back-Button">Back to all Tasks</Link>
+                </div>
                 <br/>
                 <SingleTaskView task={this.props.task}/>
             </div>
