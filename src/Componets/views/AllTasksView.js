@@ -10,7 +10,7 @@ const AllTasksView=(props)=> {
     if(tasks.length===0) {
         return (
             <div>
-                <p>There are no Tasks !!!</p>
+                <p className="NoTaskParagraph">There are no Tasks !!!</p>
             </div>
         );
     }
