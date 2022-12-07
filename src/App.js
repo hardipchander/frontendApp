@@ -1,18 +1,20 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 
-//Import Componets/Pages here
-import Home from "./Componets/Home.js";
-import AllTasks from './Componets/AllTasks.js';
-import SingleTask from './Componets/SingleTask';
+//Import Componets/Containers here
+import Home from "./Componets/Containers/Home.js";
+import AllTasks from './Componets/Containers/AllTasks.js';
+import SingleTask from './Componets/Containers/SingleTask';
+import EditTask from './Componets/Containers/EditTask.js';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/tasks" element={<AllTasks/>}/>
-        <Route path="/tasks/:taskId" element={<SingleTask/>}/>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/tasks" element={<AllTasks/>}/>
+        <Route exact path="/tasks/:taskId" element={<SingleTask/>}/>
+        <Route exact path="/edittask/:taskId" element={<EditTask/>}/>
       </Routes>   
     </div>
   );

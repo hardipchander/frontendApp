@@ -4,3 +4,80 @@
     height: 100vh;
     width: 100vw;
 }
+
+.Top-Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 25vh;
+}
+
+.Back-Button {
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.6);
+    border-radius: 12px;
+    font-size: 2vw;
+}
+
+.Back-Button:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.9);
+    border-radius: 12px;
+    font-size: 2vw;
+}
+
+.single-Task-Box {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    margin-left: 20vw;
+    height: 43vh;
+    border: 2px solid white;
+}
+
+.Description {
+    font-weight: bold;
+    font-size: 1.8vw;
+}
+
+.Prioritylevel {
+    font-weight: bold;
+    font-size: 1.8vw;
+}
+
+.completionstatus {
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+.employee-text {
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.editButton{
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.6);
+    border-radius: 12px;
+    font-size: 1vw;
+}
+
+.editButton:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(139,0,0,0.9);
+    border-radius: 12px;
+    font-size: 1vw;
+}
