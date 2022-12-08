@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {useParams} from "react-router-dom";
-import {Navigate} from 'react-router-dom';  // Did not use Redirect Componet becuase their is a error with it
+import {Navigate} from 'react-router-dom';  // Did not use Redirect Componet becuase their is a error since it is with version 5
 import '../../Styles/EditTask.css';
 
 // Need Thunks
@@ -23,14 +23,15 @@ const withRouter = WrappedComponent => props => {
 class EditTask extends React.Component {
     constructor(props) {
         super(props);
-        // Store form infor in state, have controlled input from state 
+        // Store form infor in state, have controlled input from state , JUST REMEMBER employeeId property stores a string  !!!!!!!!!!!!!!
         this.state={
             description: "", 
             prioritylevel: "",
             completionstatus: false,
             employeeId: null, 
             redirect: false, 
-            redirectId: null
+            redirectId: null,
+            inputError: ""
         };
     }
 
@@ -61,27 +62,42 @@ class EditTask extends React.Component {
     handleSubmitForm = e => {
         // The form does not rerender with this line
         e.preventDefault();
-
-        // Have to error form validation here logic here 
-        // Get the updated infor for the task from the form input
-        let task = {
-            id: this.props.task.id,
-            description: this.state.description,
-            prioritylevel: this.state.prioritylevel,
-            completionstatus: this.state.completionstatus,
-            employeeId: this.state.employeeId
-        };
         
-        this.props.editTask(task);
+        // Basic Form Validation
+        if(this.state.description==="" && this.state.prioritylevel==="") {
+            this.setState({inputError:"Description and Priority Level are required"});
+            return;
+        }
+        else if(this.state.description==="") {
+            this.setState({inputError:"Description is required"});
+            return;
+        }
+        else if(this.state.prioritylevel==="") {
+            this.setState({inputError:"Priority Level is required"});
+            return;
+        }
+        else { // All the input values are good
+             // Get the updated infor for the task from the form input
+            let task = {
+                id: this.props.task.id,
+                description: this.state.description,
+                prioritylevel: this.state.prioritylevel,
+                completionstatus: this.state.completionstatus,
+                employeeId: this.state.employeeId
+            };
+            
+            this.props.editTask(task);
 
-        this.setState({
-          redirect: true, 
-          redirectId: this.props.task.id
-        });
+            this.setState({
+            redirect: true, 
+            redirectId: this.props.task.id
+            });
+        }
     }
 
 
     render() {
+        //console.log(this.state.employeeId);
         // Go Back to Single Task View
         if(this.state.redirect) {
             return (<Navigate to={`/tasks/${this.state.redirectId}`} replace={true}/>);
@@ -116,6 +132,10 @@ class EditTask extends React.Component {
                     <br/>                    
                     <br/>
                 </form>
+                <br/>
+                <br/>
+                <br/>
+                {this.state.inputError!=="" && <h2 className="input-task-form-error">{this.state.inputError}</h2>}
             </div>
         );
     }
