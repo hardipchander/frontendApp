@@ -11,10 +11,10 @@ const SingleTaskView=(props) => {
           <p className="Description">Description: {task.description}</p>
           <p className="Prioritylevel">Prioritylevel: {task.prioritylevel}</p>
           <p className="completionstatus">{(task.completionstatus) ? (<p>Finished</p>) : (<p>Not Done</p>) }</p>
-          {(task.employee)? (<p className="employee-text"> The employee is {task.employee.firstname + " " + task.employee.lastname}</p>): (<p className="employee-text">No employee has this task assigned.</p>)}
+          {(task.employee)? (<p className="employee-text"> The employee is {task.employee.firstname + " " + task.employee.lastname}</p>): (<p className="employee-text">Unassigned.</p>)}
           <Link to={`/edittask/${task.id}`} className="editButton">Edit the Task </Link>
         </div>
-      ); 
+    ); 
 };
 
 export default SingleTaskView;
