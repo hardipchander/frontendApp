@@ -17,3 +17,9 @@
     color: white; 
     font-weight: 'bold';
 }
+
+.input-task-form-error {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
