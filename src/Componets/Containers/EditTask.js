@@ -1,10 +1,23 @@
 import React from "react";
 import {connect} from "react-redux";
+import {useParams} from "react-router-dom";
 import {Navigate} from 'react-router-dom';  // Did not use Redirect Componet becuase their is a error with it
 import '../../Styles/EditTask.css';
 
 // Need Thunks
 import {fetchSingleTaskThunk, editTaskThunk} from '../../store/thunks';
+
+// Newer Version 
+const withRouter = WrappedComponent => props => {
+    const params = useParams();
+  
+    return (
+      <WrappedComponent
+        {...props}
+        params={params}
+      />
+    );
+};
 
 // Edit Task Container that has a form
 class EditTask extends React.Component {
@@ -23,7 +36,7 @@ class EditTask extends React.Component {
 
     // Set state when componet first mounts 
     componentDidMount() {
-        this.props.fetchTask(1); //this.props.match.params.id doesnt work need tho fix this part of the code !!!!!!!!!!!!!!!!!!!!!!1
+        this.props.fetchTask(this.props.params.taskId); 
         this.setState({
             description: this.props.task.description,
             prioritylevel: this.props.task.prioritylevel,
@@ -122,7 +135,7 @@ const mapDispatch=(dispatch) => {
     })
 }
 
-export default connect(mapState, mapDispatch)(EditTask);
+export default withRouter(connect(mapState, mapDispatch)(EditTask));
 
 
 

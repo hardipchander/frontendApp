@@ -1,17 +1,30 @@
 import React from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import { useParams} from "react-router-dom";
+
 import '../../Styles/SingleTask.css';
 // Need the thunk to fetch the task
 import {fetchSingleTaskThunk} from '../../store/thunks';
 // Get the view
 import SingleTaskView from '../views/SingleTaskView';
 
+// Newer Version to get the URL Id with React Router 6
+const withRouter = WrappedComponent => props => {
+    const params = useParams();
+    return (
+      <WrappedComponent
+        {...props}
+        params={params}
+      />
+    );
+};
+
 class SingleTask extends React.Component { 
     componentDidMount(){
+        console.log("Single Task Get");
         // Get the task from the id in url (parameter)
-        this.props.fetchTask(1);  // ERROR is here right here !!!!!!!!!!!, need to grab id
-        // this.props.match.params.id doesn't work
+        this.props.fetchTask(this.props.params.taskId); 
     }
 
     render() {
@@ -42,4 +55,4 @@ const mapDispatch = (dispatch) => {
     };
 };
 
-export default connect(mapState, mapDispatch)(SingleTask);
+export default withRouter(connect(mapState, mapDispatch)(SingleTask));
