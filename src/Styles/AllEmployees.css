@@ -1,0 +1,81 @@
+.AllEmployeesView {
+    background-color: dodgerblue;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.title-AEV {
+    text-align: center;
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.HeaderPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-back-Home {
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(13, 19, 33,0.6);
+    border-radius: 12px;
+    font-size: 1vw;
+}
+
+.link-back-Home:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(13,19,33,0.9);
+    border-radius: 12px;
+    font-size: 1vw;
+}
+
+.list-Name-employee {
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 2vw;
+    margin-top: 1.5vh;
+}
+
+.noEmployees {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.employee-list {
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    margin-left: 25vw;
+    list-style-type: none;
+}
+
+.employee-list li {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    margin: 3px 0;
+    transition: 0.5s;
+    width: 20vw;
+}
+
+.employee-list li:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.3vw;
+}
