@@ -68,11 +68,11 @@
     padding: 10px 20px;
     margin: 3px 0;
     transition: 0.5s;
-    width: 20vw;
+    width: 40vw;
 }
 
 .employee-list li:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .name {
