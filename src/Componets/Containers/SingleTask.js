@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 import '../../Styles/SingleTask.css';
 // Need the thunk to fetch the task

@@ -64,18 +64,24 @@
 
 .employee-list li {
     display: flex;
-    background: rgba(255, 255, 255, 0.1);
     padding: 10px 20px;
     margin: 3px 0;
     transition: 0.5s;
     width: 40vw;
-}
-
-.employee-list li:hover {
-    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid black;
 }
 
 .name {
     font-weight: bold;
     font-size: 1.3vw;
+    color: white;
+    text-decoration: none;
+}
+
+.name:hover {
+    font-weight: bold;
+    font-size: 1.3vw;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.9);
 }

@@ -7,6 +7,7 @@ import AllTasks from './Componets/Containers/AllTasks.js';
 import SingleTask from './Componets/Containers/SingleTask';
 import EditTask from './Componets/Containers/EditTask.js';
 import AllEmployees from './Componets/Containers/AllEmployees.js';
+import SingleEmployee from './Componets/Containers/SingleEmployee';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/tasks/:taskId" element={<SingleTask/>}/>
         <Route exact path="/edittask/:taskId" element={<EditTask/>}/>
         <Route exact path="/employees" element={<AllEmployees/>}/>
+        <Route exact path="/employees/:employeeId" element={<SingleEmployee/>}/>
+
       </Routes>   
     </div>
   );
