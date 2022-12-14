@@ -36,3 +36,44 @@
     border-radius: 12px;
     font-size: 1.3vw;
 }
+
+.Single-Employee {
+    border: 3px solid white;
+    background-color: black;
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.employee-text {
+    font-size: 1.5vw;
+    font-family: Verdana, sans-serif;
+}
+
+.textEmployee {
+    padding: 1vh 2vw;
+}
+
+.allTasksForEmployee {
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    margin-left: 25vw;
+    list-style-type: none;
+    border: 2px solid black;
+    padding: 2vh;
+}
+
+.All-Tasks-For-Employee {
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+.employee-description {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -13,12 +13,27 @@ const SingleEmployeeView=(props) => {
 
     // Display Infor about the Employee itself and its tasks
     return (
-        <div className="Single-Employee">
-            <p>Name: {fullName}</p>
-            <p>Department: {department}</p>
-
-
+        <div>
+            <div className="Single-Employee">
+                <p className="textEmployee">Name: <span className="employee-text">{fullName}</span></p>
+                <p className="textEmployee">Department: <span className="employee-text">{department}</span></p> 
+            </div>
+            <br/>
+            <div>
+                <ul className="allTasksForEmployee">
+                    <h3 className="All-Tasks-For-Employee">All the Tasks For {fullName}</h3>
+                    {assignedTasks.map((task) => {
+                        let description = task.description;
+                        return (
+                            <li key={task.id}>
+                                <Link to={`/tasks/${task.id}`}><span className="employee-description">{description}</span></Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
         </div>
+       
     );
     
     
