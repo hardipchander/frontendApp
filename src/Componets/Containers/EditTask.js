@@ -5,7 +5,7 @@ import {Navigate} from 'react-router-dom';  // Did not use Redirect Componet bec
 import '../../Styles/EditTask.css';
 
 // Need Thunks
-import {fetchSingleTaskThunk, editTaskThunk} from '../../store/thunks';
+import {fetchSingleTaskThunk, editTaskThunk, fetchAllEmployeesThunk} from '../../store/thunks';
 
 // Newer Version 
 const withRouter = WrappedComponent => props => {
@@ -37,7 +37,8 @@ class EditTask extends React.Component {
 
     // Set state when componet first mounts 
     componentDidMount() {
-        this.props.fetchTask(this.props.params.taskId); 
+        this.props.fetchTask(this.props.params.taskId);
+        this.props.fetchEmployees(); 
         this.setState({
             description: this.props.task.description,
             prioritylevel: this.props.task.prioritylevel,
@@ -57,6 +58,16 @@ class EditTask extends React.Component {
         const {type, checked} = e.target;
         this.setState({[e.target.name]: type==="checkbox"? checked : e.target.value});
     };
+
+    // Handle the change for the options for changing the employee of the task
+    handleOptionsChange = e => {
+        if (e.target.value === "Unassigned") {
+            this.setState({employeeId:null});
+        } 
+        else {
+            this.setState({employeeId: e.target.value})
+        }
+    }
 
     // Handle the submission of the form
     handleSubmitForm = e => {
@@ -98,6 +109,11 @@ class EditTask extends React.Component {
 
     render() {
         //console.log(this.state.employeeId);
+        //Need to get Infor for Employees by destructure the props
+        let { task, allEmployees, editTask, fetchTask} = this.props;
+        let assignedEmployee = task.employeeId;
+        let otherEmployees = allEmployees.filter(employee => employee.id!==assignedEmployee);
+
         // Go Back to Single Task View
         if(this.state.redirect) {
             return (<Navigate to={`/tasks/${this.state.redirectId}`} replace={true}/>);
@@ -116,14 +132,21 @@ class EditTask extends React.Component {
                     <input type="text" name="prioritylevel" value={this.state.prioritylevel} onChange={(e) => this.handleTextChange(e)}/>
                     <br/>
                     <br/>
-                    <br/>
                     <input type="checkbox" id="completionstatus" name="completionstatus" checked={this.state.completionstatus} onChange={(e) => this.handleTextChange(e)}></input>
                     <label className="Task-Form-Input">Completed ? </label>
                     <br/>
                     <br/>
                     <br/>
-                    <label className="Task-Form-Input">Employee Id: </label>
-                    <input type="text" name="employeeId" value={this.state.employeeId} onChange={(e) => this.handleTextChange(e)} />
+                    <label className="Employee-Select-Label">Employee: </label>
+                    <select onChange={(e) => this.handleOptionsChange(e)}>
+                        {task.employee!==null ? <option value={task.employeeId}>{task.employee.firstname+" (current)"}</option>: <option value="Unassigned">Unassigned</option>}
+                        {otherEmployees.map(employee => {
+                            return (
+                                <option value={employee.id} key={employee.id}>{employee.firstname}</option>
+                            )
+                        })}
+                        {task.employee!==null && <option value="Unassigned">Unassigned</option>}
+                    </select>
                     <br/>
                     <br/>                    
                     <br/>
@@ -133,9 +156,9 @@ class EditTask extends React.Component {
                     <br/>
                 </form>
                 <br/>
-                <br/>
-                <br/>
                 {this.state.inputError!=="" && <h2 className="input-task-form-error">{this.state.inputError}</h2>}
+
+
             </div>
         );
     }
@@ -144,13 +167,15 @@ class EditTask extends React.Component {
 const mapState=(state) => {
     return {
       task: state.task,
+      allEmployees: state.allEmployees
     };
-  };
+};
 
 const mapDispatch=(dispatch) => {
     return({
         editTask: (task) => dispatch(editTaskThunk(task)),
         fetchTask: (id) => dispatch(fetchSingleTaskThunk(id)),
+        fetchEmployees: () => dispatch(fetchAllEmployeesThunk())
 
     })
 }
