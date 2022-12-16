@@ -15,7 +15,7 @@ const SingleEmployeeView=(props) => {
     return (
         <div>
             <div className="Single-Employee">
-                <p className="textEmployee">Name: <span className="employee-text">{fullName}</span></p>
+                <p className="textEmployee">Full Name: <span className="employee-text">{fullName}</span></p>
                 <p className="textEmployee">Department: <span className="employee-text">{department}</span></p> 
             </div>
             <br/>
