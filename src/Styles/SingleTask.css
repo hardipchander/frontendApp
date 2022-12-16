@@ -19,7 +19,7 @@
     padding: 1vw;
     background-color: rgba(139,0,0,0.6);
     border-radius: 12px;
-    font-size: 2vw;
+    font-size: 1.3vw;
 }
 
 .Back-Button:hover {
@@ -29,7 +29,7 @@
     padding: 1vw;
     background-color: rgba(139,0,0,0.9);
     border-radius: 12px;
-    font-size: 2vw;
+    font-size: 1.3vw;
 }
 
 .single-Task-Box {
@@ -39,8 +39,8 @@
     align-items: center;
     width: 60vw;
     margin-left: 20vw;
-    height: 45vh;
     border: 2px solid white;
+    padding: 2vh 0;
 }
 
 .Description {
@@ -80,4 +80,9 @@
     background-color: rgba(139,0,0,0.9);
     border-radius: 12px;
     font-size: 1vw;
+}
+
+.fullName {
+    color: lightblue;
+    text-decoration: none;
 }

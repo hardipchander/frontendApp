@@ -16,24 +16,16 @@ const AllTasksView=(props)=> {
     }
     else {
         return (
-            <div className="All-Tasks">
+           <ul className="Tasks-List">
                 {tasks.map((task) => {
                     let description = task.description;
                     return (
-                        <div>
-                            <div key={task.id} className="oneTaskBox">
-                                <Link to={`/tasks/${task.id}`} className="oneTask">
-                                    {description}
-                                </Link>
-                            </div>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </div>
-                        
+                        <li key={task.id}>
+                            <Link to={`/tasks/${task.id}`}><span className="description">{description}</span></Link>
+                        </li>
                     );
                 })}
-            </div>
+           </ul>
         );
     }
 };

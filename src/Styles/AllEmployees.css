@@ -1,50 +1,57 @@
-.AllTasksView {
-    background-color: rgb(35, 87, 137);
+.AllEmployeesView {
+    background-color: dodgerblue;
     color: white;
     height: 100vh;
     width: 100vw;
 }
 
-.topPart{
+.title-AEV {
+    text-align: center;
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.HeaderPart {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-h1 {
-    text-align: center;
-    font-family: Verdana,Tahoma, sans-serif;
-    font-size: 3vw;
-    margin: 0;
+.link-back-Home {
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(13, 19, 33,0.6);
+    border-radius: 12px;
+    font-size: 1vw;
 }
 
-.list-Name {
+.link-back-Home:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1vw;
+    background-color: rgba(13,19,33,0.9);
+    border-radius: 12px;
+    font-size: 1vw;
+}
+
+.list-Name-employee {
     font-family: Verdana,Tahoma, sans-serif;
     font-size: 2vw;
     margin-top: 1.5vh;
 }
 
-.link-back {
-    color: white;
-    text-decoration: none;
-    padding: 1vw;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 12px;
-    font-size: 1vw;
-}
-
-.link-back:hover {
+.noEmployees {
     color: white;
     font-weight: bold;
-    text-decoration: none;
-    padding: 1vw;
-    background-color: rgba(0,0,0,0.9);
-    border-radius: 12px;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
 }
 
-.Tasks-List {
+.employee-list {
     box-sizing: border-box;
     position: relative;
     padding: 10px;
@@ -55,7 +62,7 @@ h1 {
     list-style-type: none;
 }
 
-.Tasks-List li {
+.employee-list li {
     display: flex;
     padding: 10px 20px;
     margin: 3px 0;
@@ -64,22 +71,17 @@ h1 {
     border: 2px solid black;
 }
 
-.description {
+.name {
     font-weight: bold;
     font-size: 1.3vw;
     color: white;
+    text-decoration: none;
 }
 
-.description:hover {
+.name:hover {
     font-weight: bold;
     font-size: 1.3vw;
     color: white;
-    background: rgba(0, 0, 255, 0.6);
-}
-
-.NoTaskParagraph {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5vw;
-    text-align: center;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.9);
 }

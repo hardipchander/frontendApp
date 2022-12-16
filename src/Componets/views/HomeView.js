@@ -13,9 +13,10 @@ class HomeView extends React.Component {
         return(
             <div className="HomePage">
                 <h1>Welcome to the Home Page</h1>
+                <br/>
                 <div className="Links">
                     <Link to='/tasks' className="Link">All Tasks</Link>
-                    <Link to='/' className="Link">All Employees</Link>
+                    <Link to='/employees' className="Link">All Employees</Link>
                 </div>
             </div>
         );
