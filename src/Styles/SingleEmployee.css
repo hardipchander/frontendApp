@@ -77,3 +77,27 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+.edit-Button{
+    color: white;
+    text-decoration: none;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.edit-Button:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.edit-Employee-Text {
+    padding: 4px;
+    background-color: blue;
+    border: 2px solid white;
+    border-radius: 12px;
+    width: 10vw;
+    margin-left: 20vw;
+}

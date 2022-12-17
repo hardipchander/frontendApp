@@ -100,8 +100,8 @@ class EditTask extends React.Component {
             this.props.editTask(task);
 
             this.setState({
-            redirect: true, 
-            redirectId: this.props.task.id
+                redirect: true, 
+                redirectId: this.props.task.id
             });
         }
     }
@@ -110,7 +110,7 @@ class EditTask extends React.Component {
     render() {
         //console.log(this.state.employeeId);
         //Need to get Infor for Employees by destructure the props
-        let { task, allEmployees, editTask, fetchTask} = this.props;
+        let { task, allEmployees} = this.props;
         let assignedEmployee = task.employeeId;
         let otherEmployees = allEmployees.filter(employee => employee.id!==assignedEmployee);
 
@@ -139,7 +139,7 @@ class EditTask extends React.Component {
                     <br/>
                     <label className="Employee-Select-Label">Employee: </label>
                     <select onChange={(e) => this.handleOptionsChange(e)}>
-                        {task.employee!==null ? <option value={task.employeeId}>{task.employee.firstname+" (current)"}</option>: <option value="Unassigned">Unassigned</option>}
+                        {task.employee!==null ? <option value={task.employeeId}>{task.employee.firstname+" (Current)"}</option>: <option value="Unassigned">Unassigned</option>}
                         {otherEmployees.map(employee => {
                             return (
                                 <option value={employee.id} key={employee.id}>{employee.firstname}</option>
