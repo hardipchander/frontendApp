@@ -101,8 +101,6 @@ class EditEmployee extends React.Component {
     }
 
     render() {
-
-
         // Go Back 
         if(this.state.redirect) {
             return (<Navigate to={`/employees/${this.state.redirectId}`} replace={true}/>);
