@@ -17,6 +17,7 @@ const SingleEmployeeView=(props) => {
             <div className="Single-Employee">
                 <p className="textEmployee">Full Name: <span className="employee-text">{fullName}</span></p>
                 <p className="textEmployee">Department: <span className="employee-text">{department}</span></p> 
+                <Link to={`/editemployee/${employee.id}`} className="edit-Button"><p className="edit-Employee-Text">Edit Employee</p></Link>
             </div>
             <br/>
             <div>
