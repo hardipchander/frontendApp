@@ -84,3 +84,7 @@ h1 {
     font-size: 1.5vw;
     text-align: center;
 }
+
+.delete-button-task {
+    margin-left: 10px;
+}
