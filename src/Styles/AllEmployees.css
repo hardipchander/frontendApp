@@ -84,6 +84,11 @@
     margin-left: 10px;
 }
 
+.delete-button:hover {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .Add-Employee-Button {
     color: white;
     text-decoration: none;
@@ -103,4 +108,5 @@
     background-color: rgba(13,19,33,0.9);
     border-radius: 12px;
     font-size: 1vw;
+    cursor: pointer;
 }

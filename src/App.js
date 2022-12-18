@@ -10,6 +10,7 @@ import AllEmployees from './Componets/Containers/AllEmployees.js';
 import SingleEmployee from './Componets/Containers/SingleEmployee';
 import EditEmployee from './Componets/Containers/EditEmployee';
 import AddEmployee from './Componets/Containers/AddEmployee';
+import AddTask from './Componets/Containers/AddTask';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/tasks" element={<AllTasks/>}/>
         <Route exact path="/tasks/:taskId" element={<SingleTask/>}/>
         <Route exact path="/edittask/:taskId" element={<EditTask/>}/>
+        <Route exact path="/newtask" element={<AddTask/>}/>
         <Route exact path="/employees" element={<AllEmployees/>}/>
         <Route exact path="/employees/:employeeId" element={<SingleEmployee/>}/>
         <Route exact path="/editemployee/:employeeId" element={<EditEmployee/>}/>

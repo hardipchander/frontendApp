@@ -17,7 +17,7 @@ class AllEmployees extends Component {
             <div className="AllEmployeesView">
                 <div className="HeaderPart">
                     <Link to='/' className="link-back-Home">Back To HomePage</Link>
-                    <Link to='/newemployee' className="Add-Employee-Button">Add Employee</Link>
+                    <Link to='/newemployee' className="Add-Employee-Button">Add a Employee</Link>
                     <h2 className="list-Name-employee">Employees List</h2>
                 </div>
                 <AllEmployeesView allEmployees={this.props.allEmployees} deleteEmployee={this.props.deleteEmployee}/>
