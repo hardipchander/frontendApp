@@ -86,3 +86,7 @@
     background: rgba(0, 0, 0, 0.9);
     cursor: pointer;
 }
+
+.delete-button {
+    margin-left: 10px;
+}

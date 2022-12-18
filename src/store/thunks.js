@@ -114,7 +114,7 @@ export const addEmployeeThunk = (employee) => async (dispatch) => {
 export const deleteEmployeeThunk = employeeId => async dispatch => {
     try {
       await axios.delete(`${linkToAPI}/employees/${employeeId}`);
-      dispatch(actionCreators.deleteTask(employeeId));
+      dispatch(actionCreators.deleteEmployee(employeeId));
     } 
     catch(error) {
       console.error(error);

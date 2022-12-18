@@ -21,7 +21,7 @@ class AllEmployees extends Component {
                     <Link to='/' className="link-back-Home">Back To HomePage</Link>
                     <h2 className="list-Name-employee">Employees List</h2>
                 </div>
-                <AllEmployeesView allEmployees={this.props.allEmployees}/>
+                <AllEmployeesView allEmployees={this.props.allEmployees} deleteEmployee={this.props.deleteEmployee}/>
             </div>
         );
     }
