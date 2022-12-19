@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Navigate} from "react-router-dom";
 import '../../Styles/EditEmployee.css';
 
-// Need the thunk 
+// Need the add employee thunk 
 import {addEmployeeThunk} from '../../store/thunks';
 
 class AddEmployee extends React.Component {

@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import '../../Styles/AllTasks.css';
 
-// All Tasks View , need to add a Link for the new container for adding a Task 
 const AllTasksView=(props)=> {
     // Destructure the Props 
     let  {tasks, deleteTask}=props;
