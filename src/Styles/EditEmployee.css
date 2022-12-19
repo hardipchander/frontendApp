@@ -18,8 +18,43 @@
     font-weight: 'bold';
 }
 
+.Submit-Task-Button {
+    cursor: pointer;
+}
+
 .input-employee-form-error {
     color: black;
     font-weight: bold;
     text-align: center;
+}
+
+.Tasks-of-Employee {
+    margin-left: 25vw;
+    width: 50vw;
+    border: 2px solid black;
+    list-style-type: none;
+}
+
+.Tasks-For-Employee {
+    margin-left: 25vw;
+    width: 50vw;
+    border: 2px solid black;
+    list-style-type: none;
+}
+
+.Each-Task button {
+    margin-left: 5px;
+}
+
+.Each-Task button:hover {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.task-description {
+    text-decoration: none;
+}
+
+.task-description-text:hover {
+    font-weight: bold;
 }
