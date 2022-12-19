@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import { Navigate } from "react-router-dom";
 import '../../Styles/EditTask.css';
 
-// Need the thunk 
+// Need the add task thunk 
 import {addTaskThunk} from '../../store/thunks';
 
 class AddTask extends React.Component {

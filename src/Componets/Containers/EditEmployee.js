@@ -7,7 +7,7 @@ import '../../Styles/EditEmployee.css';
 import {fetchSingleEmployeeThunk, editEmployeeThunk, fetchAllTasksThunk, editTaskThunk, fetchSingleTaskThunk} from '../../store/thunks';
 import { editTask } from "../../store/actions/allActionCreators";
 
-// Have this for getting url
+// Have this for getting url for Newer React Router Version
 const withRouter = WrappedComponent => props => {
     const params = useParams();
   

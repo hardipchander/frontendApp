@@ -1,13 +1,12 @@
 import React from "react";
 import {connect} from "react-redux";
 import {useParams} from "react-router-dom";
-import {Navigate} from 'react-router-dom';  // Did not use Redirect Componet becuase their is a error since it is with version 5
+import {Navigate} from 'react-router-dom';  
 import '../../Styles/EditTask.css';
 
-// Need Thunks
 import {fetchSingleTaskThunk, editTaskThunk, fetchAllEmployeesThunk} from '../../store/thunks';
 
-// Newer Version 
+// Newer Version of React Router Dom
 const withRouter = WrappedComponent => props => {
     const params = useParams();
   
@@ -47,7 +46,6 @@ class EditTask extends React.Component {
         });
     }
 
-    // Unmount the componet
     componentWillUnmount() {
         this.setState({redirect: false, redirectId: null});
     }
@@ -87,7 +85,7 @@ class EditTask extends React.Component {
             this.setState({inputError:"Priority Level is required"});
             return;
         }
-        else { // All the input values are good
+        else { 
              // Get the updated infor for the task from the form input
             let task = {
                 id: this.props.task.id,

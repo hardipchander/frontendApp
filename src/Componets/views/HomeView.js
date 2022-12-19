@@ -2,8 +2,6 @@ import React from "react";
 import '../../Styles/Home.css';
 import {Link} from "react-router-dom";
 
-// For Final Project will have to update Employees Link as Well, right now just goes back to Home Container
-
 class HomeView extends React.Component {
     constructor(props) {
         super(props);

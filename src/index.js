@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// For all the routes with React-Router
 import { BrowserRouter } from 'react-router-dom';
 
 // Redux Store things
