@@ -105,7 +105,7 @@ class EditEmployee extends React.Component {
         // Need employee infor and all the tasks and the thunk to edit an employee
         let { employee, allTasks, editEmployee, editTask, fetchTask} = this.props;
         let currentTasks = allTasks.filter(task => task.employeeId===employee.id);
-        let availableTasks = allTasks.filter(task => task.employeeId===null);
+        let availableTasks = allTasks.filter(task => task.employeeId!==employee.id);
 
         // Go Back 
         if(this.state.redirect) {
