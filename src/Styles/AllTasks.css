@@ -29,7 +29,7 @@ h1 {
     color: white;
     text-decoration: none;
     padding: 1vw;
-    background-color: rgba(0,0,0,0.6);
+    background: linear-gradient(to bottom right, #1C1E82, #CE1D49);
     border-radius: 12px;
     font-size: 1vw;
 }
@@ -39,7 +39,7 @@ h1 {
     font-weight: bold;
     text-decoration: none;
     padding: 1vw;
-    background-color: rgba(0,0,0,0.9);
+    background: linear-gradient(to bottom right, #1C1E82, #CE1D49);
     border-radius: 12px;
     font-size: 1vw;
 }
@@ -87,11 +87,17 @@ h1 {
 
 .delete-button-task {
     margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background: white;
 }
 
 .delete-button-task:hover {
     margin-left: 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    background: white;
 }
 
 
@@ -99,7 +105,7 @@ h1 {
     color: white;
     text-decoration: none;
     padding: 1vw;
-    background-color: rgba(13, 19, 33,0.6);
+    background: linear-gradient(to bottom right, #1C1E82, #CE1D49);
     border-radius: 12px;
     font-size: 1vw;
     margin-top: 2vh;
@@ -111,7 +117,7 @@ h1 {
     text-decoration: none;
     padding: 1vw;
     margin-top: 2vh;
-    background-color: rgba(13,19,33,0.9);
+    background: linear-gradient(to bottom right, #1C1E82, #CE1D49);
     border-radius: 12px;
     font-size: 1vw;
     cursor: pointer;

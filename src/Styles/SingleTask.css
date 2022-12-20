@@ -83,6 +83,12 @@
 }
 
 .fullName {
-    color: lightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.fullName:hover {
+    color: white;
+    cursor: pointer;
     text-decoration: none;
 }

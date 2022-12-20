@@ -10,7 +10,7 @@ class HomeView extends React.Component {
     render() {
         return(
             <div className="HomePage">
-                <h1>Welcome to the Home Page</h1>
+                <h1>Employee Management System</h1>
                 <br/>
                 <div className="Links">
                     <Link to='/tasks' className="Link">All Tasks</Link>

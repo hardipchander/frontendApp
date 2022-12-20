@@ -68,7 +68,7 @@ class EditTask extends React.Component {
     }
 
     // Handle the submission of the form
-    handleSubmitForm = e => {
+    handleSubmitForm = async e => {
         // The form does not rerender with this line
         e.preventDefault();
         
@@ -95,7 +95,7 @@ class EditTask extends React.Component {
                 employeeId: this.state.employeeId
             };
             
-            this.props.editTask(task);
+            await this.props.editTask(task);
 
             this.setState({
                 redirect: true, 
