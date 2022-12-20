@@ -52,7 +52,7 @@ class EditEmployee extends React.Component {
     };
 
     // Handle Submit Form
-    handleSubmitForm = e => {
+    handleSubmitForm = async e => {
         e.preventDefault();
 
         // Form Validation Chack Here Again !!!!!!!!!! 
@@ -92,7 +92,7 @@ class EditEmployee extends React.Component {
                 department: this.state.department,
             };
             
-            this.props.editEmployee(employee);
+            await this.props.editEmployee(employee);
 
             this.setState({
                 redirect: true, 
